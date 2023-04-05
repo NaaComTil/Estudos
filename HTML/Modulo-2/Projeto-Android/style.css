@@ -1,0 +1,227 @@
+@charset "UTF-8";
+
+/* ID pode somente um em um documento, CLASS pode vários! */
+/* font: font-style font-weight font-size font-family; */
+/* 
+    # = id
+    . = class
+    : = pseudo-class
+    : : = pseudo-element
+    > = children
+*/
+/*
+    margin/padding (shorthand): top right bottom left
+    border: px type color
+    height: px
+    width: px
+    outline: px type color
+*/
+/*
+    #c5ebd6
+    #83e1ad
+    #3ddc84
+    #2fa886
+    #1a5c37
+    #063d1e
+*/
+
+/*----------------------------------------------------------*/
+
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+@font-face {
+    font-family: 'Android';
+    src: url(fontes/idroid.otf) format('opentype');
+    font-weight: normal;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+:root {
+    --cor0: #c5ebd6;
+    --cor1: #83e1ad;
+    --cor2: #3ddc84;
+    --cor3: #2fa886;
+    --cor4: #1a5c37;
+    --cor5: #063d1e;
+    --fontepad: arial, verdana, helvetica, sans-serif;
+    --fontedes: 'Bebas Neue', cursive;
+    --fonteand: 'Android', cursive;
+}
+
+body {
+    background-color: var(--cor0);
+    background-position: top;
+    font-family: var(--fontepad);
+    text-align: justify;
+}
+
+h1, h2 {
+    font-weight: normal;
+    font-family: var(--fonteand);
+    text-align: left;
+}
+
+/*----------------------------------------------------------*/
+
+header.heade{
+    height: auto;
+    background-image: linear-gradient(to bottom, var(--cor3), var(--cor5));
+    box-shadow: 0px 7px 9px rgba(0, 0, 0, 0.452);
+}
+
+main.logo {
+    text-align: center;
+    padding: 30px;
+    font-size: 1.2em;
+}
+
+h1.logoh {
+    color: white;
+    font-family: var(--fontedes);
+    text-shadow: 1px 1px 2px black;
+    text-align: center;
+}
+
+p.subtext {
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.418);
+    font-size: 0.9em;
+}
+
+nav {
+    padding-bottom: 11px;
+    text-indent: 20px;
+    text-align: left;
+}
+
+nav > a {
+    font-size: 14px;
+    color: var(--cor1);
+    padding: 7px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav > a:hover {
+    transition-duration: 0.5s;
+    background-color: var(--cor3);
+    color: var(--cor5);
+}
+
+/*----------------------------------------------------------*/
+
+main.art {
+    background: #FFFFFF;
+    max-width: 800px;
+    min-width: 280px;
+    padding: 50px;
+    margin: auto;
+    margin-bottom: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.486);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+img {
+    display: block;
+    margin: auto;
+}
+
+h1 {
+    color: var(--cor4);
+    font-size: 1.7em;
+}
+
+h2 {
+    color: var(--cor4);
+    background-color: var(--cor0);
+    padding-left: 15px;
+}
+
+div {
+    background-color: var(--cor5);
+    text-align: center;
+    margin: 0px -20px 30px -20px;
+    padding: 20px;
+    padding-bottom: 59%;
+    position: relative;
+}
+
+iframe {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+}
+
+a.pm {
+    font-weight: bold;
+    color: var(--cor4);
+}
+
+a.pm::after {
+    content: ' 🔗';
+}
+
+main.art p {
+    margin: 20px;
+    line-height: 1.5em;
+    font-size: 1em;
+    text-indent: 30px;
+}
+
+/*----------------------------------------------------------*/
+
+main.learn {
+    background-color: var(--cor0);
+    border-radius: 10px;
+    padding-bottom: 10px;
+    margin: 10px;
+    margin-bottom: 5px;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.493);
+}
+
+header.learn {
+    background-color: var(--cor3);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    color: white;
+    padding: 10px;
+    font-size: 17px;
+    font-weight: bolder;
+}
+
+ul {
+    list-style-type: '\2714\00A0\00A0';
+    list-style-position: inside;
+    columns: 2;
+    text-indent: 20px;
+}
+
+/*----------------------------------------------------------*/
+
+footer {
+    text-align: center;
+    background-color: var(--cor5);
+    color: white;
+    font-size: 0.8em;
+    padding: 5px;
+}
+
+footer a {
+    color: white;
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+footer a:hover{
+    text-decoration: underline;
+    color: var(--cor1);
+}
