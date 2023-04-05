@@ -1,0 +1,90 @@
+@charset "UTF-8";
+
+/* ID pode somente um em um documento, CLASS pode vários! */
+/* font: font-style font-weight font-size font-family; */
+/* 
+    # = id
+    . = class
+    : = pseudo-class
+    : : = pseudo-element
+    > = children
+*/
+/*
+    margin/padding (shorthand): top right bottom left
+    border: px type color
+    height: px
+    width: px
+    outline: px type color
+*/
+
+:root {
+    --cor0: #FFFFFF;
+    --cor1: #FAD8B6;
+    --cor2: #E16288;
+    --cor3: #0076BC;
+    --cor4: #54C2EE;
+    --cor5: #FBE750;
+    --cor6: #5a5858;
+    --fontepad: 'Amatic SC';
+}
+
+body {
+    background-image: url([Contents]/gradient.png);
+    background-position: top top;
+    background-color: #fbd8b7;
+    text-align: center;
+    font: 700 18px var(--fontepad), cursive;
+    color: var(--cor5);
+}
+
+main.pi {
+    background: var(--cor0);
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.486);
+    border-radius: 10px;
+    width: 600px;
+    height: auto;
+    padding: 50px;
+    margin: auto;
+    padding: auto;
+}
+
+img.small {
+    border-radius: 50%;
+}
+
+h1 {
+    color: var(--cor2);
+    text-shadow: 1px 1px 3px var(--cor2);
+}
+
+h2 {
+    color: var(--cor3);
+    text-shadow: 1px 1px 3px var(--cor3);
+}
+
+h3 {
+    color: var(--cor5);
+    text-shadow: 1px 1px 2px black
+}
+
+h4 {
+    color: var(--cor4);
+    text-shadow: 1px 1px 3px var(--cor4);
+}
+
+p {
+    color: var(--cor6);
+    font-size: 18px;
+}
+
+header > nav {
+    display: none;
+}
+
+header:hover > h1::after {
+    content: ' <3';
+}
+
+header:hover > nav {
+    display: block;
+}
