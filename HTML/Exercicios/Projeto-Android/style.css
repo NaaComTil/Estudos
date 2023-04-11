@@ -1,7 +1,6 @@
 @charset "UTF-8";
 
 /* ID pode somente um em um documento, CLASS pode vários! */
-/* font: font-style font-weight font-size font-family; */
 /* 
     # = id
     . = class
@@ -15,6 +14,7 @@
     height: px
     width: px
     outline: px type color
+    font: font-style font-weight font-size font-family;
 */
 /*
     #c5ebd6
