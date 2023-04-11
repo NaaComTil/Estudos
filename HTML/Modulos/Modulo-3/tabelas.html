@@ -1,38 +1,43 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tabelas</title>
     <style>
-        td, th, caption {
+        td,
+        th,
+        caption {
             border: 1px solid black;
             padding: 8px;
         }
+
         table {
             width: 400px;
             border-collapse: collapse;
             position: relative;
         }
 
-        thead > tr > th {
+        thead>tr>th {
             position: sticky;
             top: -1px;
             background-color: #2e2e2e;
         }
 
-        thead, tfoot {
+        thead,
+        tfoot {
             background-color: #2e2e2e;
             color: white;
             font-weight: bold;
         }
-        
-        tbody > tr:nth-child(odd) {
+
+        tbody>tr:nth-child(odd) {
             background-color: lightgray;
         }
-        
-        tbody > tr:nth-child(even) {
+
+        tbody>tr:nth-child(even) {
             background-color: white;
         }
 
@@ -45,6 +50,7 @@
         }
     </style>
 </head>
+
 <body>
     <h2>Minha primeira tabela!</h2>
     <!--Não usar tabelas para fazer a estrutura do site!!
@@ -169,7 +175,7 @@
                 <td>Rio de Janeiro</td>
                 <td class="num">17.264.064</td>
             </tr>
-                        <tr>
+            <tr>
                 <td>São Paulo</td>
                 <td class="num">45.919.049</td>
             </tr>
@@ -181,7 +187,7 @@
                 <td>Rio de Janeiro</td>
                 <td class="num">17.264.064</td>
             </tr>
-                        <tr>
+            <tr>
                 <td>São Paulo</td>
                 <td class="num">45.919.049</td>
             </tr>
@@ -193,7 +199,7 @@
                 <td>Rio de Janeiro</td>
                 <td class="num">17.264.064</td>
             </tr>
-                        <tr>
+            <tr>
                 <td>São Paulo</td>
                 <td class="num">45.919.049</td>
             </tr>
@@ -227,4 +233,5 @@
         </tfoot>
     </table>
 </body>
+
 </html>

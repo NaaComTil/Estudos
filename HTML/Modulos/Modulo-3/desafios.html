@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,31 +11,34 @@
             border-collapse: collapse;
         }
 
-        td, th {
+        td,
+        th {
             border: 1px solid black;
             padding: 8px;
             width: 300px;
             text-align: center;
         }
 
-        thead, tfoot { 
+        thead,
+        tfoot {
             background-color: rgb(36, 36, 36);
             color: white;
         }
-        
+
         col.cinzaescuro {
             background-color: darkgray;
         }
-        
+
         col.azulescuro {
             background-color: darkblue;
         }
-        
+
         div.container {
             overflow-x: auto;
         }
     </style>
 </head>
+
 <body>
     <!--Primeiro desafio!-->
     <table>
@@ -103,10 +107,10 @@
         <table>
             <thead>
                 <tr>
-                <th scope="col" rowspan="2">Área</th>
-                <th scope="col" rowspan="2">Disciplinas</th>
-                <th scope="colgroup" colspan="2">Notas</th>
-                <th scope="col" rowspan="2">Média</th>
+                    <th scope="col" rowspan="2">Área</th>
+                    <th scope="col" rowspan="2">Disciplinas</th>
+                    <th scope="colgroup" colspan="2">Notas</th>
+                    <th scope="col" rowspan="2">Média</th>
                 <tr>
                     <th scope="col">Notas 1</th>
                     <th scope="col">Notas 2</th>
@@ -139,12 +143,12 @@
                     <td>0.0</td>
                     <td>0.0</td>
                 </tr>
-                <tfoot>
-                    <tr>
-                        <th scope="row" colspan="4">Média de Exatas</th>
-                        <th>0.0</th>
-                    </tr>
-                </tfoot>
+            <tfoot>
+                <tr>
+                    <th scope="row" colspan="4">Média de Exatas</th>
+                    <th>0.0</th>
+                </tr>
+            </tfoot>
             </tbody>
         </table>
         <table>
@@ -162,14 +166,15 @@
                     <td>0.0</td>
                     <td>0.0</td>
                 </tr>
-                <tfoot>
-                    <tr>
-                        <th scope="row" colspan="4">Média de Humanas</th>
-                        <th>0.0</th>
-                    </tr>
-                </tfoot>
+            <tfoot>
+                <tr>
+                    <th scope="row" colspan="4">Média de Humanas</th>
+                    <th>0.0</th>
+                </tr>
+            </tfoot>
             </tbody>
         </table>
     </div>
 </body>
+
 </html>
