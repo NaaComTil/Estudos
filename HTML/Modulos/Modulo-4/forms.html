@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+</head>
+
+<body>
+    <h2>Meu primeiro formulário de cadastro</h1>
+        <hr>
+        <form action="cadastro.php" method="post" autocomplete="on"> <!--Method get tem limite de 3000 bytes-->
+            <!---------------------------------------------------------------------------->
+            <fieldset> <!--Text, Email, Password, Tel, etc. (estudar RegEx)-->
+                <legend>Dados pessoais</legend>
+                <p>
+                    <label for="iusu">Usuário:</label>
+                    <input type="text" name="usu" id="iusu" minlength="3" maxlength="15" autocomplete="username" required>
+                </p>
+                <p>
+                    <label for="iemail">Email:</label>
+                    <input type="text" name="email" id="iemail" placeholder="example@example.com" autocomplete="email" required>
+                </p>
+                <p>
+                    <label for="isenha">Senha:</label>
+                    <input type="password" name="sen" id="isen" required minlength="8" maxlength="15" size="15" autocomplete="new-password" required>
+                </p>
+                <p>
+                    <label for="itel">Telefone:</label>
+                    <input type="tel" name="tel" id="itel" autocomplete="tel" pattern="^\(\d{2}\)\d{4}$" required placeholder="(xx)xxxx-xxxx">
+                </p>
+            </fieldset>
+            <!---------------------------------------------------------------------------->
+            <fieldset> <!--Number, month, date, time-->
+                <legend>Number, month, date, time, etc.</legend>
+                <p>
+                    <label for="imed">Média:</label>
+                    <input type="number" name="med" id="imed" min="0" max="10" step="0.1" placeholder="0 a 10">
+                </p>
+                <p>
+                    <label for="imes">Periodo Letivo</label>
+                    <input type="month" name="mes" id="imes">
+                </p>
+                <p>
+                    <label for="idate">Data:</label>
+                    <input type="date" name="dia" id="idia">
+                </p>
+                <p>
+                    <label for="ihora">Horário da Prova</label>
+                    <input type="time" name="hora" id="ihora">
+                </p>
+            </fieldset>
+            <!---------------------------------------------------------------------------->
+            <fieldset>  <!--Checkbox-->
+                <legend>Esportes favoritos</legend>
+                <p>
+                    <input type="checkbox" name="esbas" id="iesbas"><label for="iesbas">Basquete</label>
+                    <input type="checkbox" name="esfut" id="iesfut"><label for="iesfut">Futebol</label>
+                    <input type="checkbox" name="esnat" id="iesnat"><label for="iesnat">Natação</label>
+                    <input type="checkbox" name="esten" id="iesten"><label for="iesten">Tênis</label>
+                </p>
+            </fieldset> 
+            <!---------------------------------------------------------------------------->
+            <fieldset> <!--radio-->
+                <legend>Sexo</legend>
+                <!--
+                    Ao colocar o name igual para todas as opções, você consegue marcar só uma, como deveria ser.
+                -->
+                <p>
+                    <input type="radio" name="sexo" id="isxmas"><label for="isxmas">Másculino</label>
+                    <input type="radio" name="sexo" id="isxfem"><label for="isxfem">Feminino</label>
+                    <input type="radio" name="sexo" id="isxint"><label for="isxint">Intersex</label>
+                </p>
+            </fieldset>
+            <!---------------------------------------------------------------------------->
+            <fieldset> <!--Color, range e file -->
+                <legend>Exemplos</legend>
+                <p>
+                    <label for="icor">Cor:</label>
+                    <input type="color" name="cor" id="icor">
+                </p>
+                <p>
+                    <label for="inivel">Nivel de satisfação:</label>
+                    <input type="range" name="nivel" id="inivel" min="1" max="5" value="5" <!--Padrão max é 100-->
+                </p>
+                <p>
+                    <label for="ifoto">Foto de perfil</label> <!--Ao usar file, não use method="get"-->
+                    <input type="file" name="foto" id="ifoto">
+                </p>
+            </fieldset>
+            <!---------------------------------------------------------------------------->
+            <fieldset> <!--Select, datalist e TextArea-->
+                <legend>Exemplos 2</legend>
+                <p>
+                    <label for="iest">Estado</label>
+                    <select name="estado" id="iestado">
+                        <optgroup label="Região Nordeste">
+                            <option value="PE">Pernambuco</option>
+                            <option value="PR">Paraiba</option>
+                            <option value="BA">Bahia</option>
+                            <option value="PI">Piaui</option>
+                        </optgroup>
+                        <optgroup label="Região não importantes">
+                            <option value="SP"> São Paulo</option>
+                        </optgroup>
+                    </select>
+                </p>
+                <p>
+                    <label for="iprof">Profissão:</label>
+                    <input type="text" nome="prof" id="iprof" list="lstprof">
+                    <datalist id="lstprof">
+                        <option>Programador</option>
+                        <option>Estudante</option>
+                        <option>Desempregado</option>
+                    </datalist>
+                </p>
+                <p>
+                    <label for="imsg">Mensagem</label><br>
+                    <textarea name="msg" id="imsg" cols="30" rows="10"></textarea>
+                </p>
+            </fieldset>
+            <p>
+                <input type="submit" value="Enviar">
+                <input type="reset" value="Limpar">
+            </p>
+        </form>
+        <!----------------------------------------------------------------->
+</body>
+
+</html>
