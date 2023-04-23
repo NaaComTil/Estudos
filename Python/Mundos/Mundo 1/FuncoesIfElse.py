@@ -29,7 +29,7 @@ print('---------------------------------------------------')
 
 velo = float(input('Qual a velocidade do carro em Km? '))
 if velo > 80:
-    print(f'O carro foi multado com R${((velo-80)*700)/100:.2f}!'.format(((velo-80)*700)/100))
+    print(f'O carro foi multado com R${((velo-80)*700)/100:.2f}!')
     print(f'O valor da multa é {((velo-80)*700):.2f} / 100!')
 else:
     print('O carro não foi multado.')
