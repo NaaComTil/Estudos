@@ -16,10 +16,10 @@ function contar() {
         res.innerHTML += `Acabou! `
     } else if (ifim < iini) {
         for (iini; iini >= ifim; iini -= ipas) {
-            res.innerHTML += `${iini} -> `
+            res.innerHTML += `${iini} \u{1F449} `
         } 
-        res.innerHTML += `Acabou! `
+        res.innerHTML += `Acabou! \u{1F3C1} `
     } else {
         res.innerHTML += `Impossível contar! `
-    }
+    }	
 }
