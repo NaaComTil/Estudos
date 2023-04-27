@@ -1,4 +1,4 @@
-from Módulos import dado,moeda
+from Modulos import dado, moeda
 
 moedas = dado.leiaDinheiro('Digite o preço: R$')
-moeda.resumo(moedas,10,13)
+moeda.resumo(moedas, 10, 13)

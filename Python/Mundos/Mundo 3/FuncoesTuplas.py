@@ -3,7 +3,7 @@ import random
 ha = 'Hamburguer'
 piz = 'Pizza'
 bata = 'KARTOSHKA'
-lanche = (ha,piz,bata)
+lanche = (ha, piz, bata)
 for comida in lanche:
     print(f'Eu vou comer {comida}!')
 print(f'Foram {len(lanche)} comidas!')
@@ -14,9 +14,9 @@ print(f'Foram {len(lanche)} comidas!')
 
 print('------------------------------------')
 
-tu = ('Zero','Um','Dois','Três','Quatro','Cinco','Seis','Sete','Oito','Nove','Dez',
-      'Onze','DOUZE','Treze(L)','Quatorze','Quinze','Dezesseis','Dessessete','Dezoito',
-      'Dezenove','Vinte')
+tu = ('Zero', 'Um', 'Dois', 'Três', 'Quatro', 'Cinco', 'Seis', 'Sete', 'Oito', 'Nove', 'Dez',
+      'Onze', 'DOUZE', 'Treze(L)', 'Quatorze', 'Quinze', 'Dezesseis', 'Dessessete', 'Dezoito',
+      'Dezenove', 'Vinte')
 while True:
     an = int(input('Digite um número de 0-20, digite -1 para encerrar o programa: '))
     if an < 0 and an > 20:
@@ -32,8 +32,8 @@ print(f'O Time 2 está na {time.index("Time2")+1}º posição!')
 
 print('------------------------------------')
 
-sort = (random.randint(0,10), random.randint(0,10), random.randint(0,10), random.randint(0,10),
-     random.randint(0,10))
+sort = (random.randint(0, 10), random.randint(0, 10), random.randint(0, 10), random.randint(0, 10),
+        random.randint(0, 10))
 print('Os números sorteados foram: ', end='')
 for so in sort:
     print(so, end=' ')
@@ -44,14 +44,14 @@ O menor foi {min(sort)}!""")
 print('------------------------------------')
 
 tunu = (int(input('Digite um número: ')), int(input('Digite outro número: ')),
-       int(input('Digite outro outro número: ')), int(input('Digite outro outro outro número: ')))
+        int(input('Digite outro outro número: ')), int(input('Digite outro outro outro número: ')))
 if 3 in tunu:
     print(f'O valor 3 apareceu na {tunu.index(3)+1}º posição!')
 else:
     print('Não há o valor 3 na lista!')
 print('Os valores digitados são: ', end='')
 for liso in tunu:
-    if liso%2==0:
+    if liso % 2 == 0:
         print(liso, end=' ')
 # for liso in tuno lê toda a lista em procura do designado.
 
@@ -59,8 +59,8 @@ for liso in tunu:
 print('------------------------------------')
 
 lista = ('Lapis', 1, 'Borracha', 2)
-for pos in range(0,len(lista)):
-    if pos%2==0:
+for pos in range(0, len(lista)):
+    if pos % 2 == 0:
         print(f'{lista[pos]:.<30}', end='')
     else:
         print(f'R${lista[pos]:>7.2f}')
@@ -72,7 +72,8 @@ print('------------------------------------')
 pala = ('Programador', 'Futuro', 'Mercado')
 for posi in pala:
     print(f'\nNa palavra {posi.upper()} temos ', end='')
-    for letra in posi: 
-        if letra.lower() in 'aeiou': # Escaneie cada letra da variável e cheque pelo in.
-            print(letra, end= ' ') # SIM, ISSO FUNCIONA, 
-                                   # STRINGS SÃO LISTAS DE CARACTERES, ESSE TEMPO TODO.
+    for letra in posi:
+        # Escaneie cada letra da variável e cheque pelo in.
+        if letra.lower() in 'aeiou':
+            print(letra, end=' ')  # SIM, ISSO FUNCIONA,
+            # STRINGS SÃO LISTAS DE CARACTERES, ESSE TEMPO TODO.

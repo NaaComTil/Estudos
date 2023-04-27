@@ -4,10 +4,10 @@
 # len(frase) - Conta os caracteres na frase.
 # frase.count(o,0,13) - Conta, do caractere 0 a 13, as letras "o" na frase da variável.
 
-# frase.find('deo') - Acha o "deo" na frase e cita o número no qual o caractere começa, caso não exista, 
+# frase.find('deo') - Acha o "deo" na frase e cita o número no qual o caractere começa, caso não exista,
 # o valor é mostrado como -1, nesse caso, os caracteres 'deo', começa na cadeia 11.
-# frase.rfind('deo') - Acha o "deo" na parte que mais estiver a direita e cita o número no qual o 
-# caractere começa. 
+# frase.rfind('deo') - Acha o "deo" na parte que mais estiver a direita e cita o número no qual o
+# caractere começa.
 
 # 'curso' in frase - Fala se é true ou falso que existe 'curso' na setença.
 
@@ -15,10 +15,10 @@
 # frase.upper() / lower() - Coloca os caracteres em maiúsculo e menúsculo, respectivamente.
 # frase.capitalize() - Deixa todos os caracteres em menúsculo, exceto o primeiro caractere da string.
 
-# frase.title() - Conta quantos caracteres tem na string, sem contar os espaços e deixa todos os caracteres, 
+# frase.title() - Conta quantos caracteres tem na string, sem contar os espaços e deixa todos os caracteres,
 # exceto os de começo de palavras, em menúsculo, como exemplo, a string fica assim: 'Curso Em Video Python'.
 
-# frase.strip() - Remove todos os espaços do final e inicio da cadeia de caracteres, exceto os entre 
+# frase.strip() - Remove todos os espaços do final e inicio da cadeia de caracteres, exceto os entre
 # caracteres. *Print de como funciona no Notion*
 # frase.rstrip() - Remove todos os espaços do final da cadeia de caracteres.
 # frase.lstrip() - Remove todos os espaços do inicio da cadeia de caracteres.
@@ -35,8 +35,8 @@ print(f'Seu nome em maiúsculo é {nom.upper()}!')
 print(f'Seu nome em minúsculo é {nom.lower()}!')
 print('Seu nome tem ao todo {} letras!'.format(len(nom)-nom.count(' ')))
 print('Seu primeiro nome é {} e ele tem {} letras!'
-      .format(nom.split()[0],nom.find(' ')))
-# nom.find(' '), lê a posição do primeiro espaço da cadeia de caracteres, 
+      .format(nom.split()[0], nom.find(' ')))
+# nom.find(' '), lê a posição do primeiro espaço da cadeia de caracteres,
 # logo, dizendo quantas letras tem o primeiro nome! (Esperto!)
 
 print('-------------------------------')

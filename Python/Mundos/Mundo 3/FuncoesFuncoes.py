@@ -1,16 +1,20 @@
+import datetime
+
+
 def dobra(lst):
     pos = 0
     while pos < len(lst):
         lst[pos] *= 2
         pos += 1
 
-valodobra = [2,3,5,8,5,9]
+
+valodobra = [2, 3, 5, 8, 5, 9]
 dobra(valodobra)
 print(valodobra)
 
 print('------------------------------------')
 
-import datetime
+
 def voto(anonasc):
     anonasc = datetime.date.today().year - anonasc
     if anonasc > 65:
@@ -22,13 +26,16 @@ def voto(anonasc):
     else:
         situ = 'NEGADO'
     print(f'Com {anonasc} anos, seu voto é: {situ}!')
+
+
 voto(int(input('Digite seu ano de nascimento: ')))
 
 print('------------------------------------')
 
+
 def fatorial(n=1, show=False):
     f = 1
-    for c in range(n,0,-1):
+    for c in range(n, 0, -1):
         if show:
             print(c, end='')
             if c > 1:
@@ -37,12 +44,17 @@ def fatorial(n=1, show=False):
                 print(' = ', end='')
         f *= c
     return f
+
+
 print(fatorial(5, show=False))
 
 print('------------------------------------')
 
-def ficha(jog='<desconhecido>',gols=0):
+
+def ficha(jog='<desconhecido>', gols=0):
     print(f'O jogador {jog} fez {gols} gol(s)!')
+
+
 n = str(input('Nome do jogador: '))
 g = str(input('Quantos gols fez? '))
 if g.isnumeric():
@@ -52,9 +64,10 @@ else:
 if n.strip() == '':
     ficha(gols=g)
 else:
-    ficha(n,g)
+    ficha(n, g)
 
 print('------------------------------------')
+
 
 def leiaInt(msg):
     ok = False
@@ -70,6 +83,7 @@ def leiaInt(msg):
             break
     return valor
 
+
 n = leiaInt('Digite um número: ')
 print(f'Você acabou de digitar o número {n}!')
 
@@ -79,5 +93,3 @@ print('------------------------------------')
 # return r = (lista) para voltar a lista pra vc como variável
 
 print('------------------------------------')
-
-

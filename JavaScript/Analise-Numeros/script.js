@@ -1,4 +1,5 @@
 var tot = soma = 0
+var numeros = []
 
 function adicionar() {
     //Adicionar ao select o número inputado.

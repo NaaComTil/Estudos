@@ -1,4 +1,5 @@
-import random,time
+import random
+import time
 
 heavy = light = 0
 alce = 'S'
@@ -16,7 +17,7 @@ while alce == 'S':
             light = dados[1]
     galera.append(dados[:])
     dados.clear()
-    alce = str(input('Deseja continuar [S/N]? ' )).strip().upper()
+    alce = str(input('Deseja continuar [S/N]? ')).strip().upper()
 print('-=-'*30)
 print(f'O maior peso foi de {heavy}kg, de ', end='')
 for item in galera:
@@ -33,7 +34,7 @@ print('------------------------------------')
 
 totlist = [[], []]
 resval = 0
-for valnume in range(1,8):
+for valnume in range(1, 8):
     resval = int(input(f'Digite o {valnume}º número: '))
     if resval % 2 == 0:
         totlist[0].append(resval)
@@ -47,21 +48,22 @@ Os números impares são {totlist[1]}!""")
 
 print('------------------------------------')
 
-matriz = [[0,0,0],[0,0,0],[0,0,0]]
+matriz = [[0, 0, 0], [0, 0, 0], [0, 0, 0]]
 maiorterc = somapar = somasec = 0
-for linha in range(0,3):
-    for coluna in range(0,3):
-        matriz[linha][coluna] = int(input(f'Digite o valor [{linha},{coluna}]: '))
+for linha in range(0, 3):
+    for coluna in range(0, 3):
+        matriz[linha][coluna] = int(
+            input(f'Digite o valor [{linha},{coluna}]: '))
 print('-=-'*30)
-for linha in range(0,3):
-    for coluna in range(0,3):
+for linha in range(0, 3):
+    for coluna in range(0, 3):
         print(f'[{matriz[linha][coluna]:^7}]', end='')
-        if matriz[linha][coluna]%2==0:
+        if matriz[linha][coluna] % 2 == 0:
             somapar += matriz[linha][coluna]
     print()
-for linha in range(0,3):
+for linha in range(0, 3):
     somasec += matriz[linha][2]
-for coluna in range(0,3):
+for coluna in range(0, 3):
     if coluna == 0:
         maiorterc = matriz[1][coluna]
     elif matriz[1][coluna] > maiorterc:
@@ -79,13 +81,13 @@ palpi = list()
 randpalp = list()
 for palp in range(anspalp):
     contrand = 0
-    for appends in range (0,6):
-        numerand = random.randint(1,60)
+    for appends in range(0, 6):
+        numerand = random.randint(1, 60)
         if numerand not in randpalp:
             randpalp.append(numerand)
             contrand += 1
         if contrand >= 6:
-                break
+            break
     palpi.append(randpalp[:])
     randpalp.clear()
 print(f'-=-=-=-= Sorteando {anspalp} jogos! -=-=-=-=')
@@ -107,12 +109,13 @@ while answalu == 'S':
     aluno.clear()
     answalu = str(input('Deseja continuar [S/N]? ')).strip().upper()
 print('-=-'*30)
-for alunos,alunos2 in enumerate(sala):
+for alunos, alunos2 in enumerate(sala):
     print(f'Aluno [{alunos}]    {sala[alunos][0]}        {sala[alunos][-1]}')
 print('-=-'*30)
 while mostra != 999:
     mostra = int(input("""Quer mostrar as notas de algum aluno (Digite 999 para interromper)?
     R: """))
     if mostra != 999:
-        print(f'As notas de {sala[mostra][0]} são {sala[mostra][1]} e {sala[mostra][2]}!')
+        print(
+            f'As notas de {sala[mostra][0]} são {sala[mostra][1]} e {sala[mostra][2]}!')
         print('-=-'*30)

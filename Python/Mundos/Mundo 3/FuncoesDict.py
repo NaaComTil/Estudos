@@ -1,14 +1,19 @@
+import operator
+import datetime
+import time
+import random
 naa = {'Nome': 'Itanaã', 'Idade': 17, 'Identidade': 'N/A'}
 naa['Sexo'] = 'M'
 del naa['Identidade']
 print(naa['Nome'])
-print(naa.values()) # dict_values(['Itanaã', 17, 'M'])
-print(naa.keys()) # dict_keys(['Nome', 'Idade', 'Sexo'])
-print(naa.items()) # dict_items([('Nome', 'Itanaã'), ('Idade', 17), ('Sexo', 'M')])
+print(naa.values())  # dict_values(['Itanaã', 17, 'M'])
+print(naa.keys())  # dict_keys(['Nome', 'Idade', 'Sexo'])
+# dict_items([('Nome', 'Itanaã'), ('Idade', 17), ('Sexo', 'M')])
+print(naa.items())
 
 print('-=-'*30)
 
-for key,value in naa.items(): # Para cada key e value no item naa, faça:
+for key, value in naa.items():  # Para cada key e value no item naa, faça:
     print(f'{key} é {value}!')
 # Nome é Itanaã!
 # Idade é 17!
@@ -21,10 +26,9 @@ vic['Nome'] = str(input('Qual o nome de Red? '))
 regis = list()
 regis.append(naa.copy())
 regis.append(vic.copy())
-print(regis[0]) # {'Nome': 'Itanaã', 'Idade': 17, 'Sexo': 'M'}
-print(regis[1]) # {'Idade': 17, 'Sexo': 'M', 'Nome': 'Victor'}
+print(regis[0])  # {'Nome': 'Itanaã', 'Idade': 17, 'Sexo': 'M'}
+print(regis[1])  # {'Idade': 17, 'Sexo': 'M', 'Nome': 'Victor'}
 
-import random,time,datetime,operator
 print('------------------------------------')
 
 stud = dict()
@@ -34,25 +38,25 @@ if stud['Média'] >= 6:
     stud['Situação'] = 'Aprovado'
 else:
     stud['Situação'] = 'Reprovado'
-for chastud,valstud in stud.items():
+for chastud, valstud in stud.items():
     print(f'{chastud} é igual a {valstud}!')
 
 print('------------------------------------')
 
 results = dict()
-results['Jogador1'] = random.randint(1,6)
-results['Jogador2'] = random.randint(1,6)
-results['Jogador3'] = random.randint(1,6)
-results['Jogador4'] = random.randint(1,6)
+results['Jogador1'] = random.randint(1, 6)
+results['Jogador2'] = random.randint(1, 6)
+results['Jogador3'] = random.randint(1, 6)
+results['Jogador4'] = random.randint(1, 6)
 ranking = list()
 ranking = sorted(results.items(), key=operator.itemgetter(1), reverse=True)
 print('-=-'*30)
-for player,dado in results.items():
+for player, dado in results.items():
     time.sleep(1)
     print(f'O {player} tirou {dado}!')
 print('-=-'*30)
 print(' == RANKING DOS JOGADORES == ')
-for itemrank,valrank in enumerate(ranking):
+for itemrank, valrank in enumerate(ranking):
     time.sleep(1)
     print(f'{itemrank+1}º:  {valrank[0]} com {valrank[1]}!')
 
@@ -68,7 +72,7 @@ if doc['CTPS'] != 0:
     doc['Salário'] = float(input('Salário: R$'))
     doc['Ano de Aposentadoria'] = (doc['Ano de contratação'] + 35) - anonasc
 print('-=-'*30)
-for keydoc,valudoc in doc.items():
+for keydoc, valudoc in doc.items():
     print(f'{keydoc} é igual a {valudoc}!')
 
 print('------------------------------------')
@@ -83,8 +87,9 @@ while futres == 'S':
     jogafut['Gols'] = list()
     totgols = 0
     for jogo in range(partidas):
-        jogafut['Gols'].append(int(input(f'Quantos gols na {jogo}ª partida? ')))
-    for parts,gols in enumerate(jogafut['Gols']):
+        jogafut['Gols'].append(
+            int(input(f'Quantos gols na {jogo}ª partida? ')))
+    for parts, gols in enumerate(jogafut['Gols']):
         totgols += gols
     jogafut['Total de Gols'] = totgols
     levan.append(jogafut.copy())
@@ -92,8 +97,9 @@ while futres == 'S':
     futres = str(input('Deseja continuar [S/N]? ')).strip().upper()
 print('-=-'*30)
 print('Cod / Nome / Gols / TotalDeGols')
-for indilevan,itemlevan in enumerate(levan):
-    print(f'{indilevan}  {itemlevan["Nome"]}         {itemlevan["Gols"]}     {itemlevan["Total de Gols"]}')
+for indilevan, itemlevan in enumerate(levan):
+    print(
+        f'{indilevan}  {itemlevan["Nome"]}         {itemlevan["Gols"]}     {itemlevan["Total de Gols"]}')
 print('-=-'*30)
 while showjog != 999:
     showjog = int(input("""Quer mostrar qual jogador? (Digite 999 para interromper)
@@ -103,7 +109,7 @@ while showjog != 999:
     else:
         if showjog != 999:
             print(f'- LEVANTAMENTO DO JOGADOR {levan[showjog]["Nome"]}!')
-            for partfut,goljog in enumerate(levan[showjog]["Gols"]):
+            for partfut, goljog in enumerate(levan[showjog]["Gols"]):
                 print(f'Na partida {partfut}, fez {goljog} gols!')
             print('-=-'*30)
 
@@ -124,17 +130,17 @@ while respdict == 'S':
 print('-=-'*30)
 print(f'- O grupo tem {totpere} pessoas!')
 print('-=-'*30)
-for itemregi,dictregi in enumerate(regist):
+for itemregi, dictregi in enumerate(regist):
     somaper += dictregi['Idade']
 print(f'- A média de idade é de {somaper/totpere}!')
 print('- As mulheres cadastradas foram: ', end='')
-for itemregi,dictregi in enumerate(regist):
+for itemregi, dictregi in enumerate(regist):
     if 'F' in dictregi['Sexo']:
         print(dictregi['Nome'], end=' ')
 print('\n- As pessoas acima da idade média são: ')
-for itemregi,dictregi in enumerate(regist):
+for itemregi, dictregi in enumerate(regist):
     if dictregi['Idade'] > somaper/totpere:
-        print(f'{dictregi["Nome"]} de sexo {dictregi["Sexo"]} e idade {dictregi["Idade"]}!')
+        print(
+            f'{dictregi["Nome"]} de sexo {dictregi["Sexo"]} e idade {dictregi["Idade"]}!')
 
 print('------------------------------------')
-

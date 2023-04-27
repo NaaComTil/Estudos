@@ -10,11 +10,11 @@ print('Sexo {} digitado com sucesso!'.format(re))
 
 print('------------------------------------')
 
-numpen = random.randint(0,10)
+numpen = random.randint(0, 10)
 numre = int(input('Digite o número pensado pelo computador, de 0 a 10: '))
 tent = 1
 dica = ''
-while numpen != numre:    
+while numpen != numre:
     if numpen < numre:
         dica = 'menos'
     else:
@@ -37,13 +37,15 @@ while res != 4:
     [Outros] Novos números
     Resposta: """))
     if res == 1:
-        print('A soma de {} e {} é {}!'.format(numprim,numsecu,numprim+numsecu))
+        print('A soma de {} e {} é {}!'.format(
+            numprim, numsecu, numprim+numsecu))
     elif res == 2:
-        print('A multiplicação de {} e {} é {}!'.format(numprim,numsecu,numprim*numsecu))
+        print('A multiplicação de {} e {} é {}!'.format(
+            numprim, numsecu, numprim*numsecu))
     elif res == 3:
         if maior < numsecu:
             maior = numsecu
-        print('O maior número entre {} e {} é {}!'.format(numprim,numsecu,maior))
+        print('O maior número entre {} e {} é {}!'.format(numprim, numsecu, maior))
 
 print('------------------------------------')
 
@@ -53,7 +55,7 @@ numes -= 1
 while numes != 1:
     numes -= 1
     numfat = numfat*numes
-print('O fatorial de {} é {}!'.format(numini,numfat))
+print('O fatorial de {} é {}!'.format(numini, numfat))
 
 print('------------------------------------')
 
@@ -89,7 +91,7 @@ while fina != 10:
     sequ += numesc+numesc
     fina += 1
     print('{} '.format(sequ), end='-> ')
-print('Acabou!')    
+print('Acabou!')
 
 print('------------------------------------')
 
@@ -102,7 +104,7 @@ while veze != 999:
     to += 1
     veze = int(input('Digite o {}º valor: '.format(to)))
 print("""[ ---------------------- ]
-Foram digitados {}º valores. A soma de todos eles é: {}!""".format(to-1,so))
+Foram digitados {}º valores. A soma de todos eles é: {}!""".format(to-1, so))
 
 print('------------------------------------')
 
@@ -114,7 +116,7 @@ while respo != 'N':
     v = int(input('Digite o {}º valor: '.format(t)))
     s += v
     if t == 1:
-            ma = me = v
+        ma = me = v
     else:
         if v > ma:
             ma = v
@@ -123,7 +125,7 @@ while respo != 'N':
     respo = str(input('Deseja continuar? [S/N] '))
 med = s/t
 print("""A média dos números digitados é {}! 
-O maior e menor valor foram, respectivamente, {} e {}!""".format(med,ma,me))
+O maior e menor valor foram, respectivamente, {} e {}!""".format(med, ma, me))
 
 print('------------------------------------')
 
@@ -133,14 +135,14 @@ saq = int(input('Informe quanto quer sacar: R$'))
 ced = 50
 totced = 0
 while True:
-    # Se o saque(saq) for maior que a cédula atual, então saq é subtraido 
+    # Se o saque(saq) for maior que a cédula atual, então saq é subtraido
     # pelas cedulas necessárias, assim adicionando +1 no saq de cédulas (totced).
     if saq >= ced:
         saq -= ced
         totced += 1
-    # CASO a cédula de R$50(ced) não consiga mais subtrair do saque(saq) [linha 10]... OU SEJA, 
-    # se o saq chegar a ser menor que R$50, então, a cédula vira de R$20. 
-    # Caso fique menor que R$20, vira R$10, e assim vai subtraindo o total e repetindo o while 
+    # CASO a cédula de R$50(ced) não consiga mais subtrair do saque(saq) [linha 10]... OU SEJA,
+    # se o saq chegar a ser menor que R$50, então, a cédula vira de R$20.
+    # Caso fique menor que R$20, vira R$10, e assim vai subtraindo o total e repetindo o while
     # e o print até o total ser 0 e o while dar break. (GENIAL!)
     else:
         if totced > 0:
@@ -158,4 +160,3 @@ print('-'*30)
 print('Acabou!')
 
 print('------------------------------------')
-
