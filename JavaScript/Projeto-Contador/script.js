@@ -6,10 +6,6 @@ function contar() {
     window.alert(`iini é ${iini}, ifim é ${ifim}, ipas é ${ipas}`)
     res.style.textAlign = 'center'
     res.innerHTML = ``
-    if (ipas == 0) {
-        window.alert('[ERRO] Passo inválido, considerando passo "1"!')
-        var ipas = 1
-    }
     if (ifim > iini) {
         for (iini; iini <= ifim; iini += ipas) {
             res.innerHTML += `${iini} \u{1F449} `
