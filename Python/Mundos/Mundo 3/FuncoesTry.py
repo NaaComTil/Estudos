@@ -51,3 +51,12 @@ n2 = leiaFloat('Digite um númeo real: ')
 print(f'O valor inteiro digitado foi {n1} e {n2}!')
 
 print('------------------------------------')
+
+import urllib, urllib.request
+
+try:
+    site = urllib.request.urlopen('http://www.pudim.com.br')
+except:
+    print('Não consegui acessar o site!')
+else:
+    print('Consegui acessar o site com sucesso!')
