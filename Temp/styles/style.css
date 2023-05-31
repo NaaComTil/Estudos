@@ -3,13 +3,14 @@
 @import url('https://fonts.googleapis.com/css?family=Amatic SC');
 
 /* ----------------- Configurações gerais ----------------- */
+
 :root {
     --cor0: #FFFFFF;
     --cor1: #FAD8B6;
     --cor2: #E16288;
     --cor3: #0076BC;
     --cor4: #5a5858;
-    --fontetit: 'Amatic SC';
+    --fontetit: 'Amatic SC', cursive;
     --fontepad: 'Inter', sans-serif;
 }
 
@@ -43,11 +44,11 @@ header:hover > nav {
     display: block;
 }
 
-/* ---------------------------------- */
-
 img.small {
     border-radius: 50%;
 }
+
+/* ---------------------------------- */
 
 h1, h2, h3, h4 {
     font-family: var(--fontetit);
