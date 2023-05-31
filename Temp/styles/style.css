@@ -20,7 +20,7 @@ body {
     /* Background position não funciona no shorthand por algum motivo */
     text-align: center;
     font: 12px var(--fontepad);
-    color: var(--cor4);
+    color: black;
 }
 
 main.pi {
@@ -48,10 +48,26 @@ img.small {
     border-radius: 50%;
 }
 
+#prox {
+    background: #fa6c97;
+    padding: 10px;
+    border-style: none;
+    border-radius: 2px;
+    box-shadow: 0px 2px 2px var(--cor2);
+    color: white;
+    font: 18px var(--fontetit);
+    text-shadow: 1px 1px 3px white;
+}
+
+#prox:hover {
+    cursor: pointer;
+    background-color: var(--cor2);
+}
 /* ---------------------------------- */
 
 h1, h2, h3, h4 {
     font-family: var(--fontetit);
+    font-weight: 700;
 }
 
 h3, h4 {
@@ -76,8 +92,4 @@ h3 {
 h4 {
     color: var(--cor4);
     text-shadow: 1px 1px 3px var(--cor4);
-}
-
-p {
-    color: var(--cor4);
 }
