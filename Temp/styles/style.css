@@ -16,17 +16,15 @@
 
 * {
     padding: 0;
-    margin: 0;
 }
 
 body {
     background: var(--cor1) url(../contents/background.png) repeat fixed;
-    background-position: top;
     /* Background position não funciona no shorthand por algum motivo */
     text-align: center;
     font: 12px var(--fontepad);
     color: black;
-    padding-top: 15vh;
+    padding-top: 10px;
 }
 
 main.pi {
@@ -35,10 +33,7 @@ main.pi {
     border-radius: 10px;
     max-width: 600px;
     padding: 10px;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+    margin: auto;
 }
 
 header > nav {
