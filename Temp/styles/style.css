@@ -10,7 +10,7 @@
     --cor2: #E16288;
     --cor3: #0076BC;
     --cor4: #5a5858;
-    --fontetit: 'Amatic SC', cursive;
+    --fontetit: 'Amatic SC';
     --fontepad: 'Inter', sans-serif;
 }
 
@@ -25,9 +25,10 @@ body {
     font: 12px var(--fontepad);
     color: black;
     padding-top: 10px;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.308);
 }
 
-main.pi {
+.pi {
     background: var(--cor0);
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.486);
     border-radius: 10px;
@@ -54,7 +55,7 @@ img.small {
 
 #prox {
     background: #ff719c;
-    padding: 10px;
+    padding: 5px 10px 5px 10px;
     margin: 10px;
     border-style: none;
     border-radius: 2px;
@@ -105,5 +106,4 @@ h4 {
 
 p {
     margin: 10px;
-    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.308);
 }
